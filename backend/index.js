@@ -3,8 +3,6 @@ const mongoose = require('mongoose');
 const Employee = require('./models/employee');
 const employeeRoutes = require("./routes/employeeRoutes");
 require('dotenv').config();
-
-
 const app = express();
 
 const PORT = process.env.PORT || 5000;
@@ -14,7 +12,6 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());    
 
 // Connect to MongoDB
-
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB is now Connected"))
   .catch((err) => console.log(err));
